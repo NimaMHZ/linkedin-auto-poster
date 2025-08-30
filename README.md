@@ -7,8 +7,9 @@ jobs:
 
       - name: Get LinkedIn Person URN
         env:
-          LINKEDIN_TOKEN: ${{ secrets.LINKEDIN_TOKEN }}
+          LINKEDIN_TOKEN: ${{ WPL_AP1.ECHSF2QQziCrdZSs.CeCPew== }}
         run: |
-          curl -H "Authorization: WPL_AP1.ECHSF2QQziCrdZSs.CeCPew==" \
+          curl -H "Authorization: Bearer $LINKEDIN_TOKEN" \
                -H "X-Restli-Protocol-Version: 2.0.0" \
                https://api.linkedin.com/v2/me
+
